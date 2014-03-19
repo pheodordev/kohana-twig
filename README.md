@@ -14,7 +14,7 @@ Installation
 First, clone this project from your `MODPATH/` directory:
 
 	cd modules/
-	git clone https://github.com/tommcdo/kohana-twig.git twig
+	git clone https://github.com/pheodordev/kohana-twig.git twig
 	cd twig/
 	git submodule init
 	git submodule update
