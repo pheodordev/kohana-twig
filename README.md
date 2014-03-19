@@ -46,13 +46,25 @@ Inside your action, you would attach the Twig as follows:
 	$twig = Twig::factory('main');
 	$twig->name = 'Tom';
 	$this->response->body($twig);
+	
+	
+Template controller
+-----
 
-Your Twig files can also reference other templates by name, which will be
-located using the cascading filesystem. Note that the extension of the twig
-file is omitted; in the following Twig template example, a file called
-`template.html` would be located in the cascading filesystem:
+        class Controller_Welcome extends Controller_Twig_Template {
+            
+            protected $template = "template";
+            
+            public function action_index() {
+               $this->template->var = "foobar";
+            }
+        }
+        
 
-	{% extends "template" %}
+For change template use: 
+  
+        $this->template->set_filename('new_template');
+
 
 For more information on Twig templates, see [Twig for Template Designers][5]
 
