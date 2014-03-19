@@ -51,14 +51,14 @@ Inside your action, you would attach the Twig as follows:
 Template controller
 -----
 
-class Controller_Welcome extends Controller_Twig_Template {
+   class Controller_Welcome extends Controller_Twig_Template {
 
-    protected $template = "template";
+      protected $template = "template";
             
-    public function action_index() {
-       $this->template->var = "foobar";
-    }
-}
+      public function action_index() {
+         $this->template->var = "foobar";
+      }
+   }
         
 
 For change template use: 
