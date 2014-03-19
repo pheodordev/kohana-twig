@@ -9,6 +9,11 @@ class Kohana_Twig extends View {
 	 * Twig environment
 	 */
 	protected static $_environment = NULL;
+	
+	/**
+	 * Global data
+	 */
+	protected static $_global_data = array();
 
 	/**
 	 * Initialize the cache directory
@@ -75,6 +80,10 @@ class Kohana_Twig extends View {
 			$filter = new Twig_SimpleFilter($key, $value);
 			$env->addFilter($filter);
 		}
+		foreach(self::$_global_data as $key => $value) 
+		{
+                        $env->addGlobal($key, $value);
+                }
 
 		return $env;
 	}
@@ -92,6 +101,17 @@ class Kohana_Twig extends View {
 		}
 		return static::$_environment;
 	}
+	
+	/**
+	 * Set global data for the Twig view
+	 * 
+	 * @param string $key
+	 * @param mixed $value
+	 */
+	public static function set_global($key, $value = NULL)
+        {
+        	Twig::$_global_data[$key] = $value;
+        }
 
 	/**
 	 * Set the filename for the Twig view
