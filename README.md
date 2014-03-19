@@ -1,6 +1,11 @@
 kohana-twig
 ===========
 
+This id fork https://github.com/tommcdo/kohana-twig
+Added controller template and global data.
+
+---
+
 Kohana-twig is a [Kohana][1] 3.3 module for the popular [Twig][2] template
 engine. It was designed to offer the full capabilities of Twig with a strong
 focus on operating within the guidelines and best practices of the Kohana
