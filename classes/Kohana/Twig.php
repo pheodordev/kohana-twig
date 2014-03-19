@@ -80,7 +80,7 @@ class Kohana_Twig extends View {
 			$filter = new Twig_SimpleFilter($key, $value);
 			$env->addFilter($filter);
 		}
-		foreach(self::$_global_data as $key => $value) 
+		foreach(static::$_global_data as $key => $value) 
 		{
                         $env->addGlobal($key, $value);
                 }
@@ -110,7 +110,7 @@ class Kohana_Twig extends View {
 	 */
 	public static function set_global($key, $value = NULL)
         {
-        	Twig::$_global_data[$key] = $value;
+        	static::$_global_data[$key] = $value;
         }
 
 	/**
