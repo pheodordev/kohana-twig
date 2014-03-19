@@ -1,7 +1,7 @@
 kohana-twig
 ===========
 
-This is fork https://github.com/tommcdo/kohana-twig
+This is fork [kohana-twig][7].
 Added controller template and global data.
 
 ---
@@ -118,3 +118,4 @@ please read them over thoroughly.
 [4]: http://kohanaframework.org/3.3/guide/kohana/files
 [5]: http://twig.sensiolabs.org/doc/templates.html
 [6]: http://kohanaframework.org/3.3/guide/kohana/conventions
+[7]: https://github.com/tommcdo/kohana-twig
