@@ -1,7 +1,7 @@
 kohana-twig
 ===========
 
-This is fork [kohana-twig][7].
+This is a fork of [kohana-twig][7].
 Added controller template and global data.
 
 ---
